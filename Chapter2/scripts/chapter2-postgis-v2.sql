@@ -4,16 +4,19 @@ SELECT postgis_full_version();
 -- 7.2 Geometry Objects
 -- Create Table Point
 CREATE TABLE point (id integer, p_name varchar(50), geom geometry(POINT, 4326));
-INSERT INTO point(id, p_name, geom) VALUES (1, 'GISTNU', ST_GeomFromText('POINT(100.192222 16.742397)', 4326));
+
+INSERT INTO point(id, p_name, geom) VALUES (1, 'MAPEDIA Workspace', ST_GeomFromText('POINT(100.191781 16.741732)', 4326));
 INSERT INTO point(id, p_name, geom) VALUES (2, 'Phitsanulok Airport', ST_GeomFromText('POINT(100.278178 16.783647)',4326));
 
 -- Create Table Linestring
 CREATE TABLE trans (id integer, r_name varchar(50), geom geometry(LINESTRING,4326));
-INSERT INTO trans(id, r_name, geom) VALUES (1, 'road1', ST_GeomFromText('LINESTRING (100.195330 16.768094, 100.182625 16.744542, 100.179696 16.736981)',4326));
-INSERT INTO trans(id, r_name, geom) VALUES (2, 'road2', ST_GeomFromText('LINESTRING (100.215040 16.760632, 100.263804 16.756872, 100.305111 16.754764, 100.331450 16.795192)',4326));
+
+INSERT INTO trans(id, r_name, geom) VALUES (1, 'trans-no1', ST_GeomFromText('LINESTRING (100.195330 16.768094, 100.182625 16.744542, 100.179696 16.736981)',4326));
+INSERT INTO trans(id, r_name, geom) VALUES (2, 'trans-no2', ST_GeomFromText('LINESTRING (100.215040 16.760632, 100.263804 16.756872, 100.305111 16.754764, 100.331450 16.795192)',4326));
 
 -- Create Table Polygon
 CREATE TABLE polygon (id integer, pl_name varchar(50), geom geometry(POLYGON, 4326));
+
 INSERT INTO polygon(id, pl_name, geom) VALUES (1, 'polygon1', ST_GeomFromText('POLYGON ((100.282702 16.765242, 100.291548 16.770246, 100.274220 16.796035, 100.265901 16.789726, 100.282702 16.765242))', 4326));
 INSERT INTO polygon(id, pl_name, geom) VALUES (2, 'polygon2', ST_GeomFromText('POLYGON ((100.191673 16.743723, 100.195280 16.745630, 100.195784 16.744773, 100.194817 16.744228, 100.194817 16.744228, 100.193997 16.743049, 100.192566 16.742340, 100.191673 16.743723))', 4326));
 
