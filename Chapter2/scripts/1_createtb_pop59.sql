@@ -1,5 +1,5 @@
-﻿-- DROP TABLE public.population;
-CREATE TABLE public.population(
+﻿-- DROP TABLE public.pop59;
+CREATE TABLE public.pop59(
   tam_code character varying(6) PRIMARY KEY,
   tam_th character varying(100),
   tam_en character varying(100),

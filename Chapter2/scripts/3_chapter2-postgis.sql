@@ -231,3 +231,39 @@ CREATE VIEW pop_59 AS
 SELECT t.gid, t.tam_code, t.tam_th, t.amp_th, t.prov_th, p.m_tot, p.f_tot, p.t_tot, t.geom
 FROM tambon t
 JOIN  population p ON t.tam_code = p.tam_code
+
+
+
+
+
+
+-- Geometry Exercises
+SELECT ST_Area(geom)
+  FROM province
+  WHERE pv_th = 'พิษณุโลก';
+  
+
+-- Exercise.1
+SELECT rdlntype, SUM(ST_Length(ST_Transform(geom,32647))) AS length
+FROM ways
+GROUP BY rdlntype
+ORDER BY length DESC;
+
+-- Exercise.2
+SELECT SUM(ST_Area(ST_Transform(geom,32647))) / 1600 AS Rai
+FROM amphoe
+WHERE amp_th = 'นครไทย';
+
+-- Exercise.3
+SELECT p.fclass, p.name, p.geom
+FROM poi p
+WHERE ST_DWithin(p.geom, (SELECT ST_Union(geom) 
+		FROM ways 
+		WHERE rdlnnamt = 'ทางหลวงแผ่นดินหมายเลข 12'),0.001) 
+AND p.fclass = 'restaurant';
+
+-- Exercise.4
+SELECT
+ ST_AsGeoJSON(geom)
+FROM amphoe
+WHERE pv_th = 'พิษณุโลก';
