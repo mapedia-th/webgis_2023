@@ -5,7 +5,6 @@ const multer = require('multer');
 
 // 16 กำหนด connection
 
-
 // 18 สร้าง api 
 // **อย่าลืมสร้าง โฟลเดอร์ upload
 

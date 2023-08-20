@@ -1,8 +1,7 @@
-const e = require('express');
 const express = require('express')
 const app = express();
 
-
+// ใช้งาน body-parser
 
 app.use(express.static('www'))
 

@@ -160,11 +160,11 @@ function loadMap() {
         maxZoom: 19,
         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     });
-    var pro = L.tileLayer.wms("http://cgi.uru.ac.th/geoserver/wms?", {
-        layers: 'th:province_4326',
+    var pro = L.tileLayer.wms("http://xxx/geoserver/wms?", {
+        layers: 'xx:xxx',
         format: 'image/png',
         transparent: true,
-        attribution: "http://cgi.uru.ac.th"
+        attribution: "mapedia"
     });
     var baseMap = {
         "OSM": osm.addTo(map)
