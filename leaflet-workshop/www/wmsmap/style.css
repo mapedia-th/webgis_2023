@@ -1,1 +1,23 @@
+body {
+
+    font-size: 12px;
+}
+
 /* 6 create css */
+#map {
+    width: 100%;
+    height: 350px;
+    /* background-color: powderblue; */
+}
+
+#feature-info {
+    width: 100%;
+    height: 350px;
+    /* background-color: powderblue; */
+}
+
+#chart {
+    width: 100%;
+    height: 250px;
+    /* background-color: powderblue; */
+}
